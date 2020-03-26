@@ -3,22 +3,22 @@ using ConsoleApp3.Interfaces;
 
 namespace ConsoleApp3
 {
-    public class Cat
+    public class Dog
     {
         private readonly IHunter _hunter;
-        private readonly IValerian _valerian;
+        private readonly ITail _tail;
 
-        public Cat(IHunter hunter, IValerian valerian)
+        public Dog(IHunter hunter, ITail tail)
         {
             _hunter = hunter;
-            _valerian = valerian;
+            _tail = tail;
         }
 
         public void Geeting()
         {
-            Console.WriteLine("I am cat");
+            Console.WriteLine("I am dog");
             _hunter.GoHunt();
-            _valerian.GoNutsOverValerian();
+            _tail.BiteTail();
         }
     }
 }

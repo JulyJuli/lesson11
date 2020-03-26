@@ -1,13 +1,16 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using ConsoleApp3.Implementations;
+using ConsoleApp3.Interfaces;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace ConsoleApp3
 {
-    public class Startup
+    public static class Startup
     {
-        public void ConfigureServices(IServiceCollection services)
+        public static void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<ITestInterface, TestImplementation>();
+            services.AddSingleton<IHunter, ForestHunter>();
+            services.AddSingleton<IValerian, Valerian>();
+            services.AddSingleton<ITail, Tail>();
         }
-        
     }
 }
